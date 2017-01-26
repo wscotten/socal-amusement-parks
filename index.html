@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SoCal Amusement Parks Locator</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <script src="map.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKYbIHaV7r2E7QXdK5ZmAnsmUv0v6i2OQ&callback=initMap">
+    </script>
+    <link rel="stylesheet"  href="theme.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="container-narrow">
+      <div class="row">
+        <div class="col-sm-12";>
+          <h1>SoCal Amusement Parks Locator</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div id = 'start'> 
+            <h6>Click a marker for more info!</h6> </div>
+          <div id="map"></div>
+        </div>
+        <div class="col-sm-4">
+            <div id = "DisneyPics">
+              <h2>Disneyland</h2>
+              <h3>The Happiest Place on Earth</h3>
+              <div class="container">
+                <div class="col-xs-1">
+                  <p> Address: </p>
+                </div>
+                <div class="col-xs-2">
+                  <p>1313 Disneyland Dr.</p>
+                  <p>Anaheim CA, 92802</p>
+                </div>
+              </div>
+              <div class="w3-display-container" style="width:370px;">
+                  <img class = "Disney" src='http://apt.theactioneers.com/disney1.png'>
+                  <img class = "Disney" src='http://apt.theactioneers.com/disney2.png'>
+                  <img class = "Disney" src='http://apt.theactioneers.com/disney3.png'>
+                  <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1, 'Disney')">&#10094;</a>
+                  <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1, 'Disney')">&#10095;</a>
+              </div>
+            </div>
+            <div id = "KnottsPics">
+              <h2>Knotts Berry Farm</h2>
+              <h3>America's First Theme Park</h3>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-2">
+                    <p> Address: </p>
+                  </div>
+                  <div class="col-xs-6">
+                    <p>8039 Beach Blvd.</p>
+                    <p>Buena Park, CA 90620</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w3-display-container" style="width:350px;">
+                <img class = "Knotts" src='http://apt.theactioneers.com/knotts1.png'>
+                <img class = "Knotts" src='http://apt.theactioneers.com/knotts2.png'>
+                <img class = "Knotts" src='http://apt.theactioneers.com/knotts3.png'>
+                <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1, 'Knotts')">&#10094;</a>
+                <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1, 'Knotts')">&#10095;</a>
+              </div>
+            </div>
+            <div id = "SixFlagsPics">
+              <h2>Magic Mountain</h2>
+              <h3>More Coasters Than Anywhere Else</h3>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-2">
+                    <p> Address: </p>
+                  </div>
+                  <div class="col-xs-6">
+                    <p>26101 Magic Mountain Pkwy.</p>
+                    <p>Valencia CA, 91355</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w3-display-container" style="width:350px;">
+                <img class = "SixFlags" src='http://apt.theactioneers.com/sixflags1.png'>
+                <img class = "SixFlags" src='http://apt.theactioneers.com/sixflags2.png'>
+                <img class = "SixFlags" src='http://apt.theactioneers.com/sixflags3.png'>
+                <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1,'SixFlags')">&#10094;</a>
+                <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1,'SixFlags')">&#10095;</a>
+              </div>
+            </div>
+            <div id = "SeaWorldPics">
+              <h2>Seaworld</h2>
+              <h3>Real. Amazing.</h3>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-2">
+                    <p> Address: </p>
+                  </div>
+                  <div class="col-xs-6">
+                    <p>500 Sea World Dr.</p>
+                    <p>San Diego, CA 92109</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w3-display-container" style="width:350px;">
+                <img class = "SeaWorld" src='http://apt.theactioneers.com/seaworld1.png'>
+                <img class = "SeaWorld" src='http://apt.theactioneers.com/seaworld2.png'>
+                <img class = "SeaWorld" src='http://apt.theactioneers.com/seaworld3.png'>
+                <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1,'SeaWorld')">&#10094;</a>
+                <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1,'SeaWorld')">&#10095;</a>
+              </div>
+            </div>
+            <script src="slideshow.js"> </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
